@@ -1,0 +1,7 @@
+MAKE 
+
+App 
+>Gps->Latitud, logintud, fecha, hora, imei
+>Unidades->Placa, User, MOdelo, Imei
+>Login->
+>Register->Profile, Dispositivo

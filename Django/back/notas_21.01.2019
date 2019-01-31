@@ -1,0 +1,22 @@
+#Comandos 
+
+#Ejecutar servidor
+>python manage.py runserver
+
+#Crear un nuevo usuario
+>winpty python manahe.py createsuperuser
+
+#Crear un nuevo archivo o proyecto
+>python manage.py startapp Profile
+
+
+#Requermientos
+#pip install djangorestframework
+#pip install mardown
+#pip install djnago-filter
+
+
+
+
+
+
