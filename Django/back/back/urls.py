@@ -18,11 +18,12 @@ from django.urls import path, re_path
 from django.conf.urls import include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
+from Register.views import ProfileViewSet
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
 		model = User
-		fields = ('url', 'username', 'email', 'is_staff')
+		fields = ('url', 'username', 'email', 'password', 'is_staff')
 
 class UserViewSet(viewsets.ModelViewSet):
 	queryset = User.objects.all()
@@ -31,9 +32,10 @@ class UserViewSet(viewsets.ModelViewSet):
 router = routers.DefaultRouter()
 router.register (r'users', UserViewSet)
 
-
 urlpatterns = [
 	path('admin/', admin.site.urls),
-	re_path(r'^', include(router.urls)),
-    re_path(r'api/v1/login', include('Login.urls')),
+	path('', include(router.urls)),
+    re_path(r'login', include('Login.urls')),
+    re_path(r'register', include('Register.urls')),
+    re_path(r'cars', include('Cars.urls')),
 ]

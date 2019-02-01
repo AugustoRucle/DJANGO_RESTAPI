@@ -8,3 +8,5 @@ class Profile(models.Model):
     Phone = models.CharField(max_length=10, null=False)
     Email = models.CharField(max_length=50, null=False)
     Edad = models.IntegerField()
+
+
