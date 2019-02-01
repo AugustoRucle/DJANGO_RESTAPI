@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'Login',
     'Profile',
+    'Register',
+    'Cars',
     # 'django_mysql',
 ]
 
